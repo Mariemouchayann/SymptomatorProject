@@ -1,0 +1,232 @@
+.human_body_component {
+    min-width: 30%;
+    aspect-ratio: 10/13;
+
+    border-radius: 8px;
+   background-color: var(--main-color);
+}
+
+.human_body_handler {
+    position: relative;
+    width: 30vw;
+    aspect-ratio: 10/13;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.human_body_handler img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.human_body_handler > div > svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+
+    fill: #ffa32c;
+    /* stroke: #00baba;
+    stroke-width: 3px; */
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.human_body_handler svg:hover {
+    opacity: .7;
+}
+
+/*------------------ btns ---------*/
+.body_btns_container {
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    
+    padding: 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 2;
+}
+
+.body_btns_container button {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.body_btns_container .rotate_btn {
+    margin-top: 5px;
+    width: 32px;
+    height: 32px;
+    
+    display: flex;
+    align-items: center;
+    
+    outline: none;
+    border: none;
+    background-color: #fff;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+/*------------- Popup ---------------*/
+.human_body_popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: auto;
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+
+    display: block;
+
+    background-color: #fff;
+    border-radius: 8px;
+
+    box-shadow: 0px 6px 20px #00000020;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.human_body_popup.hide {
+    display: none;
+}
+
+.human_body_popup.show {
+    display: block;
+}
+
+.human_body_popup .head {
+    width: 100%;
+    padding: 8px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--main-color);
+    background-color: var(--secondary-color);
+}
+
+.human_body_popup .head span {
+    cursor: pointer;
+}
+
+.human_body_popup .search_container {
+    width: 100%;
+    padding: 10px;
+}
+
+.human_body_popup .search_container input {
+    width: 100%;
+    padding: 12px 20px 12px 40px;
+
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+.human_body_popup ul {
+    padding: 10px;
+    height: 100%;
+    max-height: 190px;
+
+    /* display: flex; */
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+    list-style: none;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.human_body_popup ul li {
+    padding: 14px 20px;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.human_body_popup ul li.popup_list_element.selected {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.human_body_popup ul li:hover {
+    background-color: var(--secondary-color);
+}
+
+/*------------- human body images -----------*/
+.human_body_imgs_container {
+    width: 100%;
+    height: 100%;
+
+    z-index: 1; 
+}
+
+
+.human_body_imgs_container img {
+    width: 100%;
+    height: 100%;
+    filter:sepia(100%) saturate(800%) hue-rotate(168deg) brightness(100%) contrast(100%);
+         
+}
+
+.human_body_imgs_container .filter {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(159deg) brightness(100%) contrast(100%);
+}
+
+/*-------- red_circles_container ---------*/
+.human_body_handler .red_circles_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.human_body_handler .red_circles_container img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    width: 15px;
+    height: 15px;
+
+    z-index: 3;
+}
+
+@media (max-width: 950px) {
+    .human_body_component {
+        width: 100vw;
+    }
+
+    .human_body_handler {
+        width: 100%;
+    } 
+}

@@ -1,0 +1,52 @@
+.search_component {
+    position: relative;
+}
+
+.symptones_container {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 9999999;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* width: 600px; */
+    border-radius: 4.33px;
+    border: 1px solid #f2f2f2;
+    background: var(--white, #FFF);
+    padding: 12px;
+
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 200px;
+    overflow-y: scroll;
+
+    box-shadow: 0 10px 20px #00000011;
+}
+
+.symptones_container ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+.symptones_container ul li {
+    padding: 7px 12px;
+    cursor: pointer;
+    background-color: #fff;
+    
+    border-radius: 4.33px;
+    background: #F4F4F4;
+    color: #818181
+}
+
+
+.symptones_container ul li:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}

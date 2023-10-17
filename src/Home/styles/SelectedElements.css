@@ -1,0 +1,34 @@
+.selected_elements_container {
+    width: 100%;
+    height: auto;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.selected_elements_container .selected_element {
+    background: #ffe6e4 !important;
+    color: #333 !important;
+    border: 1px solid #ffcbc6;
+
+    background: #20a8d3;
+    width: 30%;
+    height: 63px;
+    border-radius: 9.77px;
+    flex: 1 0 21%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 12px;
+    fill: white;
+    color: white;
+    align-items: center;
+    font-size: 14px;
+}
+
+.selected_elements_container .selected_element svg {
+    cursor: pointer;
+}
